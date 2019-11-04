@@ -1,7 +1,57 @@
-.hello{
-    color:red;
+body{
+    margin: 0;
 }
-.player{
-    width: 390px;
-    height: 270px;
+/* 顶部 */
+.top{
+    height: 80px;
+    line-height: 80px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10%;
+    text-align: center;
+}
+/* 顶部左侧-logo */
+.top>.s0{
+    width: 10%;
+    min-width: 120px;
+    height: 100%;
+    background: url(./image/icon.webp) no-repeat;
+    background-size: auto 100%;
+}
+/* 顶部中间-导航 */
+.top>.s1{
+    color:#777;
+    display: flex;
+    width:60%;
+    min-width: 600px;
+    height: 100%;
+    /* background: #cfc; */
+}
+.top>.s1>div{
+    flex: 1;
+    transition: all .1s;
+    cursor: pointer;
+}
+.top>.s1>div:hover{
+    background: #f4f4f4;
+    transition: all 0.1s;
+}
+/* 顶部右侧- */
+.top>.s2{
+    width: 10%;
+    min-width: 120px;
+    height: 100%;
+    background: #ccf;
+}
+
+/* 中部 */
+.mid{
+    background: url(https://www.adobe.com/content/dam/offers-homepage/china/ccp-lobby-images/cn-ccp-lobby-tablet-1440x1120.jpg/jcr%3acontent/renditions/cq5dam.tablet_1400.1400.1089.jpg);
+    background-size:1920px;
+    background-position: 0 -130px;
+    height:800px;
+}
+.bottom{
+    height: 200px;
+    background: #000;
 }

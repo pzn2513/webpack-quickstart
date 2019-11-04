@@ -9,9 +9,12 @@ let getHtml=function(name){
 }
 
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        'index':['./src/index.js']
+    },
     output: {
-        filename: 'main.js',
+        // filename: '[name].bundle.js',
+        filename:'[name].js',
         path: __dirname + '/dist'
     },
     devtool:'inline-source-map',
@@ -33,15 +36,25 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(img|png|svg|jpg|gif|bmp)$/,
+                test: /\.(img|png|svg|jpg|gif|bmp|webp)$/,
                 use: [
-                    'file-loader'
+                    {
+                        loader:'file-loader',
+                        options:{
+                            outputPath:'images'
+                        }
+                    }
                 ]
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
                 use: [
-                    'file-loader'
+                    {
+                        loader:'file-loader',
+                        options:{
+                            outputPath:'fonts'
+                        }
+                    }
                 ]
             }
         ]
